@@ -1,20 +1,23 @@
 # webcam\_yad2k
 
+Let's try to test YOLOv2, a _state-of-the-art_, real time object detection system with your webcam:)
+
 ## Introduction
-This repository contains test\_yolo\_video.py hacked to use [yad2k](https://github.com/allanzelener/YAD2K) (Yet Another Darknet 2 Keras by _allanzelener_) with a webcam video input.
+This repository contains `test_yolo_video.py` hacked to use [yad2k](https://github.com/allanzelener/YAD2K) (Yet Another Darknet 2 Keras by _allanzelener_) with a webcam video input.
+
 Original paper: [YOLO9000: Better, Faster, Stronger](https://arxiv.org/abs/1612.08242) by Joseph Redmond and Ali Farhadi.
 
 ## Installation
-1. First, install yad2k following its instruction.
-1. Clone this repository (webcam\_yad2k) somewhere.
+1. First, install `yad2k` following [its instruction](https://github.com/allanzelener/YAD2K#installation).
+1. Clone this repository (`webcam_yad2k`) somewhere.
 ```
 git clone https://github.com/kmotohas/webcam_yad2k.git
 ```
-1. Create a hard link of test\_yolo\_video.py into a directory of yad2k.
+1. Create a hard link of `test_yolo_video.py` into a directory of `yad2k`.
 ```
 ln webcam_yad2k/test_yolo_video.py /path/to/yad2k/
 ```
-Additionally, you might need to install OpenCV (cv2).
+Additionally, you might need to install `OpenCV (cv2)`.
 
 ## Usage
 Usage of test\_yolo\_video.py is mostly not different from test\_yolo.py of yad2k.
@@ -27,7 +30,7 @@ cd /path/to/yad2k
 # ./yad2k.py yolo.cfg yolo.weights model_data/yolo.h5
 ./test_yolo.py model_data/yolo.h5  # --show_fps 0  # uncomment this if you don't like to show FPS on a corner of a video
 ```
-Some other options is found in lines of argparse in test\_yolo\_video.py.
+Some other options is found in lines of `argparse` in `test_yolo_video.py`.
 ```
 parser = argparse.ArgumentParser(
         description='Run a YOLO_v2 style detection model on test images..')
